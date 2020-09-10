@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body, html {
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    }
+    .contaigner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    }
+    .item {
+    display: flex;
+    flex-grow: 1;
+    }
+    .item:nth-child(2) {
+    flex : 4 1 0;
+    }
+    #main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .mainbutton {
+    padding-top: 15px;
+    }
+    .showing {
+    background-color: black;
+    }
+
+    </style>
+</head>
+<body>
+<div class="contaigner">
+    <div class="item aside">
+        <button class = "backward">b</button>
+    </div>
+    <div class="item" id="main">
+        <img class='mainImage' src="images/1.jpg" width="700px" height="500px"><img>
+        <div>
+            <button id="btn0" class="mainBtn" onclick="mainbuttonClick();">1</button>
+            <button id="btn1" class="mainBtn" onclick="mainbuttonClick();">2</button>
+            <button id="btn2" class="mainBtn" onclick="mainbuttonClick();">3</button>
+            <button id="btn3" class="mainBtn" onclick="mainbuttonClick();">4</button>
+            <button id="btn4" class="mainBtn" onclick="mainbuttonClick();">5</button>
+        </div>
+    </div>
+    <div class="item aside">
+        <button class = "forward">f</button>
+    </div>
+</div>
+<script src="js-carousel.js"></script>
+</body>
+</html>
